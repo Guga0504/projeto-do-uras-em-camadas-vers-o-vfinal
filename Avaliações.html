@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Doçuras em camadas - Avaliações</title>
+    <link rel="stylesheet" href="Avaliações.css">
+</head>
+<body>
+    
+    <header>
+        <nav>
+            <ul>
+                <li>
+                    <a href="index.html"> Página Inicial<box-icon type='solid' name='home'></box-icon></a> 
+                </li>
+            </ul>
+        </nav>   
+    </header>
+
+    <div class="container">
+        <h1>Avaliações dos Usuários</h1>
+    
+        <div class="review">
+          <h3>Kento Nanami</h3>
+          <div class="stars">⭐⭐⭐⭐☆</div>
+          <p>Tive uma experiência excelente. Os bolos e doces são simplesmente incríveis 
+            e fresquinhos, bem decorados e com um sabor caseiro que faz toda a diferença. Encomendei um bolo de aniversário
+             e uma variedade de doces finos para uma festa de família, e todos os convidados elogiaram.</p>
+        </div>
+    
+        <div class="review">
+          <h3>Arthur Morgan</h3>
+          <div class="stars">⭐⭐⭐⭐⭐</div>
+          <p>O atendimento foi impecável, desde o primeiro contato até a entrega. A equipe foi atenciosa, 
+            respondeu rapidamente às minhas dúvidas e ainda me ajudou a escolher os sabores mais indicados para o 
+            tipo de evento.</p>
+        </div>
+
+        <div class="review">
+            <h3>Jonhy Silverhand</h3>
+            <div class="stars">⭐⭐⭐⭐☆</div>
+            <p>Tive uma experiência excelente. Os bolos e doces são simplesmente incríveis 
+              e fresquinhos, bem decorados e com um sabor caseiro que faz toda a diferença. Encomendei um bolo de aniversário
+               e uma variedade de doces finos para uma festa de família, e todos os convidados elogiaram.</p>
+          </div>
+    
+        <form class="review-form" id="reviewForm">
+            <h2>Deixe sua avaliação:</h2>
+            <input type="text" id="name" placeholder="Seu nome" required />
+            <textarea id="opinion" placeholder="Sua opinião..." required></textarea>
+            <select id="rating" required>
+                <option value="">Nota</option>
+                <option value="⭐☆☆☆☆">⭐☆☆☆☆</option>
+                <option value="⭐⭐☆☆☆">⭐⭐☆☆☆</option>
+                <option value="⭐⭐⭐☆☆">⭐⭐⭐☆☆</option>
+                <option value="⭐⭐⭐⭐☆">⭐⭐⭐⭐☆</option>
+                <option value="⭐⭐⭐⭐⭐">⭐⭐⭐⭐⭐</option>
+            </select>
+            <button type="submit">Enviar</button>
+        </form>
+
+        <div id="reviews"></div>
+      </div>
+
+      <script>
+        document.getElementById('reviewForm').addEventListener('submit', function (e) {
+            e.preventDefault(); // Impede o envio padrão do formulário
+
+            // Captura os valores do formulário
+            const name = document.getElementById('name').value;
+            const opinion = document.getElementById('opinion').value;
+            const rating = document.getElementById('rating').value;
+
+            // Cria um novo elemento de avaliação
+            const reviewContainer = document.createElement('div');
+            reviewContainer.classList.add('review');
+            reviewContainer.innerHTML = `
+                <h3>${name}</h3>
+                <div class="stars">${rating}</div>
+                <p>${opinion}</p>
+            `;
+
+            // Adiciona a nova avaliação ao final do container de avaliações
+            document.getElementById('reviews').appendChild(reviewContainer);
+
+            // Limpa o formulário
+            document.getElementById('reviewForm').reset();
+        });
+    </script>
+   
+    <footer>
+        <p>&copy; 2025 Vagas de Emprego. Todos os direitos reservados.</p>
+    </footer>
+
+ 
+
+</body>
+</html>

@@ -1,0 +1,160 @@
+:root {
+    --primary-color: #d2691e;
+    --secondary-color: #fff;
+    --text-color: #222;
+    --text-light-color: #444;
+    --bg-color: #f5f5f5;
+    --footer-bg: #d2691e;
+    --footer-pink: #e75480;
+    --highlight: #f59e42;
+    --font-family: 'Poppins', sans-serif;
+}
+
+/* Reset básico */
+body, html {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Layout principal */
+body {
+    font-family: var(--font-family, Arial, sans-serif);
+    background: url('./img/bkground3.jpg') no-repeat center center fixed;
+    background-size: cover;
+    color: var(--text-color);
+    margin: 0;
+    padding: 0;
+}
+
+    
+
+header {
+    background: var(--footer-pink);
+    color: var(--secondary-color);
+    padding: 20px 0 10px 0;
+    text-align: center;
+}
+
+header h1 {
+    margin: 0;
+    font-size: 2rem;
+    text-align: center;
+}
+
+header p {
+    margin: 5px 0 0;
+    font-size: 1.2rem;
+    text-align: center;
+}
+
+header nav ul {
+    list-style: none;
+    margin: 0 auto;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 15px;
+}
+
+header nav ul li {
+    text-align: center;
+}
+
+header nav ul li a {
+    text-decoration: none;
+    color: var(--secondary-color);
+    font-size: 1.2rem;
+    font-weight: bold;
+    padding: 5px 10px;
+    border-radius: 5px;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+header nav ul li a:hover {
+    background-color: var(--highlight);
+    color: var(--primary-color);
+}
+
+main {
+    padding: 20px 10px;
+    max-width: 700px;
+    margin: 0 auto;
+}
+
+.vaga {
+    background: var(--secondary-color);
+    border-radius: 8px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.07);
+    padding: 18px 16px;
+    margin-bottom: 20px;
+}
+
+.vaga h2 {
+    color: var(--primary-color);
+    margin-top: 0;
+}
+
+.vaga p {
+    margin: 5px 0;
+    line-height: 1.5;
+}
+
+.vaga a button {
+    background: var(--primary-color);
+    color: var(--secondary-color);
+    border: none;
+    border-radius: 5px;
+    padding: 10px 18px;
+    font-size: 1em;
+    cursor: pointer;
+    margin-top: 10px;
+    transition: background 0.2s;
+}
+
+.vaga a button:hover {
+    background: var(--highlight);
+    color: var(--primary-color);
+}
+
+footer {
+    background: var(--footer-pink);
+    color: var(--secondary-color);
+    text-align: center;
+    padding: 12px 0;
+    font-size: 0.95em;
+    margin-top: 30px;
+}
+
+/* Responsividade */
+@media (max-width: 600px) {
+    html, body {
+        overflow-x: hidden;
+    }
+    header {
+        padding: 15px 0 8px 0;
+    }
+    header h1 {
+        font-size: 1.3rem;
+    }
+    header p {
+        font-size: 1rem;
+    }
+    main {
+        padding: 10px 2vw;
+    }
+    .vaga {
+        padding: 12px 6px;
+        font-size: 0.98em;
+        width: 100%;
+        box-sizing: border-box;
+    }
+    .vaga h2 {
+        font-size: 1.1em;
+    }
+    .vaga a button {
+        width: 100%;
+        font-size: 1em;
+    }
+} 

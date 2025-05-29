@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Doçura em camadas - Cardápio</title>
+    <link rel="stylesheet" href="cardapio.css">
+</head>
+<body>
+    <header>
+        <nav>
+            <ul>
+                <li><a href="index.html">Página Inicial</a></li>
+            </ul>
+        </nav>
+    </header>
+    
+    <input type="text" id="search-bar" class="search-bar" placeholder="Pesquisar bolos...">
+
+    <div class="products">
+        <h2>Cardápio</h2>
+        <div class="cards-container">
+            <div class="card" data-name="bolo embalado">
+                <img src="./img/bolo embalado.jpg" alt="Bolo Embalado">
+                <h3>Bolo Embalado</h3>
+                <p>Delicioso bolo com coco e leite condensado.</p>
+                <p class="price">R$12,90</p>
+                <button>Comprar</button>
+            </div>
+            <div class="card" data-name="bolo baby mousse">
+                <img src="./img/bolo baby mousse.jpg" alt="Bolo Baby Mousse">
+                <h3>Bolo Baby Mousse</h3>
+                <p>Um bolo perfeito para ocasiões especiais.</p>
+                <p class="price">R$69,90</p>
+                <button>Comprar</button>
+            </div>
+            <div class="card" data-name="bolo baby ninho">
+                <img src="./img/bolo baby ninho.jpg" alt="Bolo Baby Ninho">
+                <h3>Bolo Baby Ninho</h3>
+                <p>Feito com o melhor leite em pó.</p>
+                <p class="price">R$69,90</p>
+                <button>Comprar</button>
+            </div>
+            <div class="card" data-name="bolo frutas vermelhas">
+                <img src="./img/bolo frutas vermelhas.jpg" alt="Bolo Frutas Vermelhas">
+                <h3>Bolo Frutas Vermelhas</h3>
+                <p>Com brigadeiro e frutas frescas.</p>
+                <p class="price">R$215,82</p>
+                <button>Comprar</button>
+            </div>
+    
+            <div class="card" data-name="bolo de cenoura">
+                <img src="./img/bolo de cenoura.jpg" alt="Bolo de Cenoura">
+                <h3>Bolo de Cenoura</h3>
+                <p>Clássico bolo de cenoura com cobertura de chocolate.</p>
+                <p class="price">R$25,00</p>
+                <button>Comprar</button>
+            </div>
+            <div class="card" data-name="bolo red velvet">
+                <img src="./img/bolo red velvet.jpg" alt="Bolo Red Velvet">
+                <h3>Bolo Red Velvet</h3>
+                <p>Elegante bolo com sabor suave e cobertura cremosa.</p>
+                <p class="price">R$89,90</p>
+                <button>Comprar</button>
+            </div>
+            <div class="card" data-name="bolo de chocolate">
+                <img src="./img/bolo de chocolate.jpg" alt="Bolo de Chocolate">
+                <h3>Bolo de Chocolate</h3>
+                <p>Feito com chocolate belga e recheio cremoso.</p>
+                <p class="price">R$99,90</p>
+                <button>Comprar</button>
+            </div>
+            <div class="card" data-name="bolo de limão">
+                <img src="./img/bolo de limao.jpg" alt="Bolo de Limão">
+                <h3>Bolo de Limão</h3>
+                <p>Refrescante bolo com toque cítrico de limão.</p>
+                <p class="price">R$45,00</p>
+                <button>Comprar</button>
+            </div>
+            <div class="card" data-name="bolo de morango">
+                <img src="./img/bolo de morango.jpg" alt="Bolo de Morango">
+                <h3>Bolo de Morango</h3>
+                <p>Com pedaços de morango fresco e chantilly.</p>
+                <p class="price">R$79,90</p>
+                <button>Comprar</button>
+            </div>
+            <div class="card" data-name="bolo de maracujá">
+                <img src="./img/bolo de maracuja.jpg" alt="Bolo de Maracujá">
+                <h3>Bolo de Maracujá</h3>
+                <p>Com cobertura de maracujá e recheio cremoso.</p>
+                <p class="price">R$59,90</p>
+                <button>Comprar</button>
+            </div>
+            <div class="card" data-name="bolo de coco">
+                <img src="./img/bolo de coco.jpg" alt="Bolo de Coco">
+                <h3>Bolo de Coco</h3>
+                <p>Feito com coco fresco e leite condensado.</p>
+                <p class="price">R$49,90</p>
+                <button>Comprar</button>
+            </div>
+            <div class="card" data-name="bolo de amêndoas">
+                <img src="./img/bolo de amendoas.jpg" alt="Bolo de Amêndoas">
+                <h3>Bolo de Amêndoas</h3>
+                <p>Com amêndoas torradas e cobertura especial.</p>
+                <p class="price">R$119,90</p>
+                <button>Comprar</button>
+            </div>
+        </div>
+    </div>
+</section>
+</main>
+
+<div class="pagination">
+    <a href="cardapio2.html" class="next-button">Próxima Página</a>
+</div>
+
+    <footer>
+        <p>&copy; 2025 Doçuras em Camadas. Todos os direitos reservados.</p>
+    </footer>
+
+    <script>
+document.getElementById('search-bar').addEventListener('input', function () {
+    const searchValue = this.value.toLowerCase();
+    const cards = document.querySelectorAll('.card');
+    cards.forEach(card => {
+        const productName = card.getAttribute('data-name') || '';
+        if (productName.includes(searchValue)) {
+            card.style.display = 'block';
+        } else {
+            card.style.display = 'none';
+        }
+    });
+});
+</script>
+
+
+
+</body>
+</html>
